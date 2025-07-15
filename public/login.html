@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+  <form method="POST" action="/login">
+    <div>
+      <label>Código de convite:</label>
+      <input name="code" required />
+    </div>
+    <div>
+      <label>Nome de usuário:</label>
+      <input name="username" required />
+    </div>
+    <div>
+      <label>Email:</label>
+      <input name="email" required />
+    </div>
+    <button>Entrar</button>
+    <p style="color:red;">
+      <script>
+        if (new URLSearchParams(window.location.search).has('error')) {
+          document.write('Código inválido');
+        }
+      </script>
+    </p>
+  </form>
+</body>
+</html>
